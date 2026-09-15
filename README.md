@@ -71,15 +71,6 @@ The first phase focused on gathering information about the authorized `networkwa
 
 WHOIS was used to obtain domain registration information.
 
-### Findings
-
-* Registrar: **GoDaddy**
-* Domain creation date: **2019-11-06**
-* Name servers:
-
-  * `NS6135.HOSTGATOR.COM`
-  * `NS6136.HOSTGATOR.COM`
-
 ### Why it matters
 
 Registration and DNS information can provide useful background information about a target's infrastructure and hosting environment.
@@ -89,17 +80,6 @@ Registration and DNS information can provide useful background information about
 ## 2. WhatWeb
 
 WhatWeb was used to fingerprint the technologies used by the website.
-
-### Findings
-
-The scan identified:
-
-* Apache
-* WordPress 7.1
-* WP Download Manager 3.3.58
-* JQuery 3.7.1
-* Bootstrap 7.1
-* `info@networkwalks.com`
 
 ### Security relevance
 
@@ -113,14 +93,6 @@ The report classified exposed web-technology information as a **Medium-risk find
 
 Nslookup was used to resolve the domain name.
 
-### Finding
-
-The domain resolved to:
-
-```text
-192.232.216.135
-```
-
 ### Security relevance
 
 Knowing the IP address associated with a domain provides information about the network location of the web service.
@@ -132,18 +104,6 @@ The report classified this finding as **Low risk**.
 ## 4. cURL
 
 cURL was used to inspect the HTTP response headers.
-
-### Findings
-
-The response revealed:
-
-* The WordPress REST API endpoint:
-
-  * `/wp-json/`
-* Backend technology indicating:
-
-  * WordPress
-  * Apache
 
 ### Security relevance
 
@@ -157,12 +117,6 @@ This finding was classified as **Low risk**.
 
 Wafw00f was used to determine whether a Web Application Firewall was protecting the target.
 
-### Finding
-
-The website was identified as being protected by:
-
-**ModSecurity (SpiderLabs)**
-
 ### Security relevance
 
 Identifying defensive technologies can provide information about the security architecture of a web application.
@@ -175,14 +129,8 @@ The report classified this finding as **Low risk**.
 
 DNSRecon was used to enumerate DNS records.
 
-### Finding
 
-The DNS enumeration verified that the domain's **A record** pointed to:
-
-```text
-192.232.216.135
-```
-
+### Security relevance
 DNS enumeration is useful during reconnaissance because DNS records can reveal information about how an organization's services and infrastructure are configured.
 
 ---
